@@ -1,0 +1,23 @@
+
+.NavCss {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.NavCss img{
+    width: 150px;
+}
+.NavCss  ul{
+    display: flex;
+}
+.NavCss  ul li{
+    text-underline-position: none;
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    list-style: none;
+}
+.NavCss  ul li:hover{
+    text-shadow: 0 5px 10px rebeccapurple;
+    font-size: 18px;
+}
