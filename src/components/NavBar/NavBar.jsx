@@ -1,6 +1,6 @@
-import Carrito from './Carrito'
+import Carrito from '../Carrito/Carrito'
 import './NavBar.css'
-import logo from '../assets/logo.jpg'
+import logo from '../../assets/logo.webp'
 
 
 const NavBar = () => {

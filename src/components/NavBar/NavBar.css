@@ -1,0 +1,32 @@
+
+.NavCss {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    background-color: rgb(72, 71, 71);
+}
+.NavCss img{
+    width: 90px;
+    height: 80px;
+    box-shadow: 5px 5px 5px white ;
+    border-radius: 5px 5px;
+}
+.NavCss  ul{
+    display: flex;
+    text-decoration: none;
+}
+.NavCss  ul a{
+    text-decoration: none;
+}
+.NavCss  ul li{
+    color: black;
+    margin: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+.NavCss  ul li:hover{
+    text-shadow: 0 5px 10px white;
+    font-size: 15px;
+}
