@@ -1,5 +1,9 @@
-import getProcucts from "../../data/data";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
+import getProducts from "../../data/data";
+import ItemList from "./ItemList";
+import "./ItemListContainer.css"
+
+
 const ItemListContainer = ({ saludo }) => {
 
     //condicion true or false
@@ -20,37 +24,27 @@ const ItemListContainer = ({ saludo }) => {
     //     })
     // }
 
-    const [ products,setProducts ] = useState([])
+    const [products, setProducts] = useState([])
 
-    useEffect(()=>{
-
-        getProcucts()
-            .then((respuesta)=>{
-                console.log(respuesta);
+    useEffect(() => {
+        getProducts()   
+            .then((respuesta) => {
+                setProducts(respuesta);
             })
-            .catch((error)=>{
-                console.log(error);
+            .catch((error) => {
+                console.error(error);
             })
-            .finally(()=>{
+            .finally(() => {
                 console.log('finalizo la promesa');
             });
-    }, []);
-
-
+    }, []); 
 
     return (
         <div>
-        <p>{saludo}</p>
-        {
-            JSON.map((jsons)=>(
-                <div>
-                    <p>{jsons.name}</p>
-                </div>
-            ))
-        }
+            <p>{saludo}</p>
+            <ItemList products={products}/>
         </div>
     )
 }
 
 export default ItemListContainer
-   

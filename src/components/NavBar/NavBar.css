@@ -1,7 +1,6 @@
 
 .NavCss {
     display: flex;
-    justify-content: space-between;
     margin-right: 10px;
     background-color: rgb(72, 71, 71);
 }
@@ -29,4 +28,8 @@
 .NavCss  ul li:hover{
     text-shadow: 0 5px 10px white;
     font-size: 15px;
+}
+.NavCss .CarritoCss{
+    display: block;
+    justify-content:end;
 }

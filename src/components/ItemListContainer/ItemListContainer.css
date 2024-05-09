@@ -1,0 +1,9 @@
+div{
+display: block;
+}
+div img{
+    display: flex;
+}
+div p{
+    display: flex;
+}
