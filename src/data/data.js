@@ -28,4 +28,4 @@ const getProducts = () => {
     },3000);
     })
 }
-export default getProducts
+// export default getProducts

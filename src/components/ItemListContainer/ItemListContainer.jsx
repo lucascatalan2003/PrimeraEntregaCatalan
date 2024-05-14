@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import getProducts from "../../data/data";
+// import getProducts from "../../data/data";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css"
-
+import { getProducts} from "../../utils/fetchApi";
 
 const ItemListContainer = ({ saludo }) => {
 
@@ -27,17 +27,11 @@ const ItemListContainer = ({ saludo }) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        getProducts()   
-            .then((respuesta) => {
-                setProducts(respuesta);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
-            .finally(() => {
-                console.log('finalizo la promesa');
-            });
+        getProducts()
+        .then ((data) => setProducts (data))
+    
     }, []); 
+
 
     return (
         <div>
